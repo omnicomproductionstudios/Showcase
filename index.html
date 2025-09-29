@@ -59,6 +59,17 @@
       }
       .btn {
         font-size: 20px;
+        position: relative;
+      }
+      .btn .pass {
+        display: block;
+        font-size: 8px;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        font-weight: 600;
       }
       .footer {
         text-align: center;
@@ -231,7 +242,7 @@
           >EUX Flex Alert</a
         >
         <a href="https://awards.ddb.com/" class="btn btn-info" target="_blank"
-          >Award DDB</a
+          >Award DDB <small class="pass">Password protected</small></a
         >
         <a
           href="https://ddbcountsdev.wpenginepowered.com/"
