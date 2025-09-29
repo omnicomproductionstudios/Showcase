@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://business.bt.com/";
+    </script>
+
+    <style rel="stylesheet" type="text/css">
+      @font-face {
+        font-family: "poppins bold";
+        src: url(./subset-Poppins-Bold.ttf);
+      }
+      @font-face {
+        font-family: "poppins light";
+        src: url(./subset-Poppins-Light.ttf);
+      }
+      html {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      *,
+      :after,
+      :before {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* box-sizing: border-box; */
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #main-container {
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        box-sizing: border-box;
+        cursor: pointer;
+        opacity: 1;
+        border: solid 1px #282828;
+        overflow: hidden;
+        background: #fff;
+        /* left: 50%;
+        transform: translateX(-50%); */
+      }
+      #banner{
+        position: absolute;
+        left: -1px;
+        top: -1px; 
+        width:300px;
+        height:250px;
+        cursor: pointer !important;
+        z-index: 100;
+      }
+      div,
+      img {
+        position: absolute;
+        background-repeat: no-repeat;
+        opacity: 1;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      .hidden{
+        visibility: hidden;
+        opacity: 0;
+      }
+      #copy1{
+        left: -300px;
+      }
+      #copy2{
+        left: 129px;
+      }
+      .retina {
+          -webkit-transform: scale(0.5, 0.5);
+          -moz-transform: scale(0.5, 0.5);
+          -ms-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+          -webkit-transform-origin: left top;
+          -moz-transform-origin: left top;
+          -ms-transform-origin: left top;
+          transform-origin: left top;
+      }
+      .bg{
+        z-index: -1;
+      }
+      #cta, #copy2, #logo{
+        z-index: 1;
+      }
+    </style>
+    
+  </head>
+  <body class="animate"  onload="init();">
+    <div id="main-container">
+      <div id="banner">
+        <img src="./images/photo.png" class="" alt="">
+        <img src="./images/copy1.png" id="copy1" class="retina hidden" alt="">
+        <img src="./images/copy2.png" id="copy2" class="retina hidden" alt="">
+        <img src="./images/cta.png" id="cta" class="retina hidden" alt="">
+        <img src="./images/logo.png" id="logo" class="retina" alt="">
+        <img src="./images/bg.png" class="" alt="">
+      </div>
+    </div>
+
+    <script>
+        var startTime;
+        var tl;
+        function init() {
+          startTime = new Date();
+          tl = gsap.timeline( {repeat:1, repeatDelay: 1, onComplete: endTime} );
+          show();
+        }
+
+        function show() {
+            tl.to(copy1,1,{ ease: "power1.out", autoAlpha:1, left:0 },"+=0.5");
+            tl.to(copy2,1,{ ease: "power1.out", autoAlpha:1,  left:0},"+=0.5");
+            tl.to(cta,1,{ ease: "power1.out", autoAlpha:1},"+=0.5");
+        }
+        function endTime() {
+          var endTime = new Date();
+
+          console.log(
+            "Animation duration: " + (endTime - startTime) / 1000 + " seconds"
+          );
+        }
+    </script>
+    <script>
+      var clickArea = document.getElementById("banner");
+      clickArea.onclick = function () {
+        window.open(clickTag, "_blank");
+      };
+  </script>
+  </body>
+</html>

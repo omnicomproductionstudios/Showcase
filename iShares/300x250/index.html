@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="ad.size" content="width=300,height=600">
+  </head>
+  <body onload="init();">
+    <div id="main-container">
+      <div id="mainbg"></div>
+      <img id="logo" src="./images/logo.png" class="canvas_img" />
+      <div class="hide">
+        <div class="anim_container" id="anim">
+          <img id="runway" src="./images/runway2.png" style="height: 250px; width: 1489px;" alt="" />
+          <img id="plane" src="./images/plane.png" style="height: 43px; width: 133px;" alt="" />
+        </div>
+        <div class="maintext text1">
+          <div id="t1" class="Extrabold">
+            <span class="t1word word1">IBIT BY iSHARES</span>
+            <br />
+            <span class="t1word word2">HAS ARRIVED.</span>
+          </div>
+        </div>
+        <div class="maintext text2" id="t2">
+          <div class="Book"> Meet the iShares Bitcoin Trust ETF, <br /> bitcoin access made easy. <br />
+            <br />
+          </div>
+          <div class="Bold">Get your share of progress.</div>
+        </div>
+      </div>
+      <div id="background_exit"></div>
+      <div id="info" class="Extrabold">
+        <img src="./images/arrow.png" /> Notice
+      </div>
+      <div id="terms">
+        <img id="close" src="images/close.png" alt="close" />
+        <div id="text_wrapper">
+          <div id="terms_text" class="Book copy">
+            <span class="Bold copy"> Visit <a target="_blank" href="https://www.ishares.com">www.iShares.com</a> to view a prospectus, which <br /> includes investment objectives, risks, fees, expenses <br /> and other information that you should read and <br /> consider carefully before investing. Investing <br /> involves risk, including possible loss of principal. </span>
+            <br />
+            <br /> Each target date fund has a number (a target date) at the end of the name that <br /> designates an approximate year when an investor plans to start withdrawing their <br /> money. The asset allocation of the fund will become progressively more <br /> conservative as the specified target date approaches. An investment in the fund is <br /> not guaranteed, and an investor may experience losses, including near, at, or after <br /> the target date. Investment in a fund of funds is subject to the risks and expenses <br /> of the underlying funds. <br />
+            <br /> Prepared by BlackRock Investments, LLC, member FINRA. <br />
+            <br /> © 2023 BlackRock, Inc. or its affiliates. All Rights Reserved. <span class="Bold copy inner">BLACKROCK,</span>
+            <span class="Bold copy inner">LIFEPATH</span> and <span class="Bold copy inner">iSHARES</span> are trademarks of BlackRock, Inc. or its affiliates. All other trademarks are those of their respective owners. 
+          </div>
+        </div>
+        <div id="scroll">
+          <div id="circle" class="scollbtns nopointer"></div>
+          <div id="up" class="scollbtns"></div>
+          <div id="down" class="scollbtns"></div>
+        </div>
+      </div>
+      <button id="cta" class="Extrabold">LEARN MORE</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

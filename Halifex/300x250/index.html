@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="ad.size" content="width=300,height=250">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script type="text/javascript">
+    var clickTag = "";
+  </script>
+</head>
+
+<body onload="window.init()">
+
+  <div id="main">
+    <img src="images/logo.svg" id="logo" class="hidden" alt="">
+    <div id="shape"></div>
+    <div class="content">
+      <div class="copy hidden" id="copy1">
+        <span class="text1">BAD <br> MOVE</span>
+        <span class="text2">
+          Not labelling<br>your removal<br>boxes.
+        </span>
+      </div>
+      <div class="copy hidden" id="copy2">
+        <span class="text1">GOOD <br> MOVE</span>
+        <span class="text2">
+          Receiving up to<br><b>£1000 cashback</b><br>when you take out<br>a mortgage with us.
+        </span>
+      </div>
+      <div class="copy hidden" id="copy3">
+        <span class="text3">
+          Join the <b>1 in 5</b><br>first-time buyers<br>who choose a<br><b>Halifax mortgage.</b>
+        </span>
+      </div>
+      <div id="cta" class="hidden">
+        <span> Find out more</span>
+      </div>
+      <div id="terms" class="hidden">
+        <span> First-time buyers only. T&CS and exclusions apply. </span>
+      </div>
+    </div>
+    <div id="bgExit"></div>
+  </div>
+
+  <script>
+    var clickArea = document.getElementById("bgExit");
+    clickArea.onclick = function () {
+      window.open(clickTag, "_blank");
+    };
+  </script>
+</body>
+
+</html>

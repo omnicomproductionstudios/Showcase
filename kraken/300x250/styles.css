@@ -1,0 +1,132 @@
+
+@font-face {
+  font-family: 'kraken-regular';
+  src: url('fonts/subset-KrakenBrand-Regular.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.absolute {
+  position:absolute;
+  height: auto;
+}
+
+sup, sub {
+  font-size: 50%;
+}
+
+html, body {
+  width:300px;
+  height:250px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#main,
+#background {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:300px;
+  height:250px;
+  background-color: #000;
+  border: solid 1px #000000;
+}
+#main {
+  overflow:hidden;
+}
+.full-width {
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: auto;
+}
+
+.charts{
+  position: absolute;
+  left: 194px;
+  top: 42px;
+  width: 300px;
+}
+.charts img{
+    width: 201px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.copy{
+  font-family: 'kraken-regular';
+  color: #fff;
+  position: absolute;
+  left: 12px;
+
+}
+.copy1{
+  font-size: 28.8px;
+  letter-spacing: -0.4px;
+  line-height: 27px;
+  top: 51px;
+  background: #F0EFFF;
+  background: linear-gradient(to top, #F0EFFF 22%, #7132F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.copy2{
+  font-size: 13px;
+  line-height: 16px;
+  top: 114px;
+  color: #F0EFFF;
+}
+.copy3{
+  top: 208px;
+  left: 14px;
+  font-size: 8px;
+  line-height: 10px;
+  color: #F0EFFF;
+}
+
+#cta{
+  font-family: 'kraken-regular';
+  display: inline-block;
+  transform-origin: center center;
+  background-color: #F0EFFF;
+  font-size: 8.3px;
+  left: 12px;
+  position: absolute;
+  top: 175px;
+  height: 18px;
+  width: 61px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 18px;
+}
+
+#default_exit{
+  top:0px;
+  left:0px;
+  width: 300px;
+  height: 250px;
+}
+
+.btn{
+  position: absolute;
+  top:0px;
+  left:0px;
+  cursor: pointer;
+  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  z-index: 200;
+}
+
+:focus{outline: 0}
+
+::-moz-focus-inner{border: 0}

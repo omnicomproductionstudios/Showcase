@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'Sassoon';
+  src: url('fonts/subset-SassoonInfantRg-Bold.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sassoon-md';
+  src: url('fonts/subset-SassoonInfantMd-Medium.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trebuchet';
+  src: url('fonts/subset-TrebuchetMS.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+strong{
+  font-family: 'cupra-bold';
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.absolute {
+  position:absolute;
+  height: auto;
+}
+
+sup, sub {
+  font-size: 50%;
+  line-height: 1.2;
+}
+
+html, body {
+  width:970px;
+  height: 250px;
+  margin: 0;
+  -webkit-text-size-adjust: 100%; 
+}
+
+#main{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:970px;
+  height: 250px;
+  background-color: #f5f0f8;
+  border: solid 1px #000000;
+  overflow:hidden;
+}
+
+.full-width {
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  width: 970px;
+  height: auto;
+}
+/* #leftVector{
+  transform: translateX(-288px);
+} */
+.copy {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Sassoon';
+  position: absolute;
+}
+.copy1{
+  font-size: 36px;
+  color: #ffffff;
+  left: 22px;
+  top: 78px;
+}
+.copy2{
+  font-size: 26.5px;
+  color: #482780;
+  left: 373px;
+  top: 107px;
+  font-family: 'Sassoon-md';
+}
+.copy3{
+  font-size: 27px;
+  color: #482780;
+  left: 416px;
+  top: 107px;
+  font-family: 'Sassoon-md';
+}
+.legal1{
+  font-family: 'Trebuchet';
+  position: absolute;
+  color: #fff;
+  font-size: 9.89px;
+  top: 217px;
+  left: 24px;
+}
+.legal2{
+  font-family: 'Trebuchet';
+  position: absolute;
+  color: #482780;
+  font-size: 9.85px;
+  top: 205px;
+  right: 21px;
+  text-align: right;
+}
+.legal2 span{
+    letter-spacing: -0.13px;
+}
+.legal3{
+  font-family: 'Trebuchet';
+  position: absolute;
+  color: #482780;
+  font-size: 9.85px;
+  top: 217px;
+  right: 21px;
+  text-align: right;
+}
+.legal1 u, .legal2 u, .legal3 u{
+  text-decoration: underline;
+  text-underline-offset: 1.5px;
+  /* text-decoration-thickness: 1.1px */
+}
+#cta{
+  background-color: #df0480;
+  color: #fff;
+  display: inline-block;
+  right: 24px;
+  bottom: 52px;
+  position: absolute;
+  font-family: 'Sassoon';
+  border-radius: 11px;
+  font-size: 20px;
+  width: 136px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoTag{
+  font-family: 'Sassoon';
+  position: absolute;
+  color: #482780;
+  right: 40px;
+  top: 89px;
+
+}
+#default_exit{
+  top:0px;
+  left:0px;
+  width: 970px;
+  height: 250px;
+  cursor: pointer;
+}
+.here{
+  position: relative;
+  z-index: 1111;
+  cursor: pointer;
+}
+
+.btn{
+  position: absolute;
+  top:0px;
+  left:0px;
+  cursor: pointer;
+  background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  z-index: 200;
+}
+
+:focus{outline: 0}
+
+::-moz-focus-inner{border: 0}

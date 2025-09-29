@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+      var clickTag = "https://www.cupraofficial.co.uk/";
+    </script>
+  </head>
+
+  <body onload="init();">
+    <div id="main">
+      <!-- <img
+        src="images/frame1.png"
+        style="
+          width: 300px;
+          height: 250px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 111;
+          opacity: 0.5;
+        "
+        alt=""
+      /> -->
+
+      <img src="images/bg.jpg" id="bg" class="absolute full-width" />
+
+      <img src="images/car.png" id="car" class="absolute full-width" />
+
+      <div id="text-container">
+        <div id="text-1" class="absolute copy cupra-regular">
+          <span>LOVE ME <br /></span>
+          <span>OR LEAVE ME</span>
+        </div>
+
+        <div id="text-2" class="absolute copy cupra-italic hidden">
+          Commit to the all-electric<br />CUPRA Born and have<br />100 days to
+          fall in love.
+        </div>
+
+        <div id="text-legal" class="absolute copy cupra-book">
+          Born stock orders placed after 17/10/24. Retail customers, 18+
+          only.<br />Subject to availability and deductions. Terms, conditions
+          and exclusions<br />apply. Visit cupra.co.uk
+        </div>
+      </div>
+
+      <img src="images/cta.png" id="cta" class="absolute full-width hidden" />
+      <img
+        src="images/cta-roll.png"
+        id="cta-roll"
+        class="absolute full-width hidden"
+      />
+      <img src="images/logo.png" id="logo" class="absolute full-width" />
+
+      <div id="default_exit" class="btn"></div>
+    </div>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script>
+      var clickArea = document.getElementById("default_exit");
+      clickArea.onclick = function () {
+        window.open(clickTag);
+      };
+    </script>
+  </body>
+</html>

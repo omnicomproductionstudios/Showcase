@@ -1,0 +1,225 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   RESET CSS
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/************ My CSS *************/
+
+html,
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: sans-serif, Helvetica, Arial;
+  font-weight: 400;
+  color: #fff;
+}
+
+html,
+.masterSize {
+  width: 300px;
+  height: 250px;
+}
+
+span {
+  display: inline-block;
+}
+
+.textC {
+  text-align: center;
+}
+
+#banner {
+  background: #21213b;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid #515151;
+  box-sizing: border-box;
+}
+
+.w100 {
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.posAbsolute {
+  position: absolute;
+}
+
+.lt0 {
+  top: 0px;
+  left: 0px;
+}
+@font-face {
+  font-family: 'SeatBlack';
+  src: url('fonts/subset-SEATBCN-Black.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+#logo {
+  width: 259px;
+  height: 106px;
+  top: 43px;
+  left: 22px;
+}
+
+#cta {
+  bottom: 35px;
+  left: 22px;
+  width: 252px;
+  height: 42px;
+  border: 1px solid #ff4a4b;
+  border-radius: 3px;
+  font-family: 'SeatBlack';
+  font-size: 16px;
+  color: #ff4a4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bg1 {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  will-change: transform;
+}
+#bg1 img {
+  transform: translate3d(-37px, 35px, 0px) scale(1.45) rotate(0.1deg);
+}

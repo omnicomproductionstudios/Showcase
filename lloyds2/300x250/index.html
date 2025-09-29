@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      var clickTag = "https://www.lloydsbank.com/";
+    </script>
+
+</head>
+
+<body onload="init();">
+
+    <div id="main">
+
+        <div id="background"></div>
+
+
+        <div id="imageCont">
+          <img src="images/bkg.jpg" id="bkg" class="absolute full-width-img"/>
+          <img src="images/overlay.jpg" id="overlay" class="absolute full-width-img hidden"/>
+          <img src="images/txt1.png" id="txt1" class="absolute full-width-img hidden"/>
+          <!-- <img src="images/txt2.png" id="txt2" class="absolute full-width-img hidden"/> -->
+        </div>
+
+        <div id="cta-container">
+          <img src="images/cta.jpg" id="cta" class="absolute hidden"/>
+        </div>
+
+        <img src="images/logo.png" id="logo" class="absolute full-width-img"/>
+
+        <div id="bgExit"></div>
+
+    </div>
+
+    <script>
+        var clickArea = document.getElementById("bgExit");
+        clickArea.onclick = function () {
+          window.open(clickTag);
+        };
+    </script>
+</body>
+
+</html>

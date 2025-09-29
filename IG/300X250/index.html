@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="ad.size" content="width=300,height=250" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <title></title>
+  <script type="text/javascript">
+    var clickTag = "https://www.ig.com/";
+  </script>
+</head>
+
+<body>
+  <div id="main_container" class="full-width full-height">
+    <!--start main_container-->
+    <!-- <img src="images/frame2.png" style="position: absolute; top: 0px; left: 0px; width: 300px; height: 250px; z-index: 11; opacity: .5;" alt=""> -->
+    <div id="main_content" class="full-width full-height pos-abs left-0 top-0"></div>
+      <div id="right_content" class="pos-abs full-width full-height pos-abs right-0 top-0 of-hide">
+        <img src="./images/face.png" id="faceR" class="full-width full-height pos-abs right-0 top-0 hidden" />
+        <div id="h1R" class="full-width pos-abs left-0 hidden text_white text_MatterBold">
+          Whatever happens,<br> it’s good to have options
+        </div>
+        <div id="h2" class="full-width pos-abs left-0 hidden text_white text_MatterBold">
+          Like an award-winning <br> specialist platform<sup>✱</sup>
+        </div>
+        <div id="h3" class="full-width pos-abs left-0 hidden text_white text_MatterBold">
+          and the quality of <br>customer service to match
+        </div>
+        <img src="./images/phn.png" id="phn" class="full-width full-height pos-abs left-0 top-0 hidden" />
+      </div>
+      <div id="left_content" class="pos-abs full-width full-height pos-abs left-0 top-0 of-hide">
+        <img src="./images/face.png" id="faceL" class="full-width full-height pos-abs left-0 top-0 hidden" />
+        <div id="h1L" class="full-width pos-abs left-0 hidden text_red text_MatterBold">
+          Whatever happens,<br> it’s good to have options
+        </div>
+      </div>
+
+      <div id="h4" class="full-width pos-abs left-0 hidden text_white text_MatterBold">
+        Choose a new way to trade<br> US options and futures
+      </div>
+      <div id="legal" class="legal hidden pos-abs left-0 bottom-0 right-0 text_white text_MatterBold">
+        When trading options and futures, losses<br>can exceed your original investment.<br><sup>✱</sup>Best Platform for Options Trading,<br>ADVFN 2024.
+      </div>
+
+      <img src="./images/logo.svg" id="logo" class="pos-abs hidden" />
+
+      <div id="cta" class="cta hidden pos-abs text_red text_MatterBold">
+        <span>Find out more</span>
+      </div>
+
+    </div>
+
+    <div id="default_exit" class="btn full-width full-height pos-abs left-0 top-0">
+      <div class="pos-abs border_h left-0 top-0"></div>
+      <div class="pos-abs border_h left-0 bottom-0"></div>
+      <div class="pos-abs border_v top-0 left-0"></div>
+      <div class="pos-abs border_v top-0 right-0"></div>
+    </div>
+    <!--end main_container-->
+  </div>
+  <script>
+    var clickArea = document.getElementById("default_exit");
+    clickArea.onclick = function () {
+      window.open(clickTag);
+    };
+    </script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=970,height=250" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript">
+      // ADNAMI CLICK TRACKING MACRO
+      let clickTagPrefix = "${CLICK_URL}"; // must stay like this for Adnami
+      const clickURL1 = "https://kenvuepro.com/en-gb/brands/calpol";
+      const clickURL2 =
+        "https://assets.ctfassets.net/hziwb47cmkp3/6ztqCjr39GruFSoogdCKqK/5361046263cf683d12d521217cd6d79b/Calpol__Calcough_and_Calgel_All_Products_Product_Information.pdf";
+
+      if (clickTagPrefix.indexOf("${") === 0) {
+        clickTagPrefix = "";
+      }
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="main">
+      <img src="images/baby1.jpg" class="full-width baby1" alt="" />
+      <img src="images/baby2.jpg" class="full-width hidden baby2" alt="" />
+      <img
+        src="images/left-vector.png"
+        class="full-width"
+        id="leftVector"
+        alt=""
+      />
+      <img src="images/p1.png" class="full-width p1 hidden" alt="" />
+      <img src="images/p2.png" class="full-width p2 hidden" alt="" />
+      <img src="images/logo.png" class="full-width" alt="" />
+
+      <div class="logoTag">Paracetamol</div>
+      <div class="copy copy1">
+        Help parents tackle<br />post-immunisation fever
+      </div>
+      <div class="legal1">
+        <span class="here"
+          ><u>Click here</u> for Calpol (Paracetamol) & Calprofen (Ibuprofen)
+          product information.</span
+        >
+      </div>
+      <img src="images/icon.png" class="full-width hidden icon" alt="" />
+      <div class="copy copy2 hidden">Gets to work on fever in 15 minutes*</div>
+
+      <div class="legal2 hidden">
+        <span class="here"
+          >*Data on file 2025. <u>Click here</u> for Calpol (Paracetamol) &
+          Calprofen (Ibuprofen) product information.<br />
+          **Online survey of 200 UK retail pharmacists by IQVIA for Kenvue.96%
+          spontaneously recommend Calpol for Children’s analgesia. Feb
+          2025</span
+        >
+      </div>
+
+      <div class="copy copy3 hidden">Works on fever for up to 8 hours</div>
+      <div class="legal3 hidden" id="legal3">
+        <span class="here"
+          ><u>Click here</u> for Calpol (Paracetamol) & Calprofen (Ibuprofen)
+          product information.</span
+        >
+      </div>
+
+      <div id="cta" class="hidden">Learn more</div>
+
+      <!-- Banner-wide click area -->
+      <div id="default_exit" class="btn"></div>
+    </div>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.13_min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script>
+      const clickElement1 = document.getElementById("default_exit");
+      const clickElements = document.querySelectorAll(".here");
+
+      clickElement1.addEventListener("click", function (e) {
+        const exitUrl = clickTagPrefix + clickURL1;
+        window.open(exitUrl, "_blank");
+      });
+
+      clickElements.forEach((el) => {
+        el.addEventListener("click", function (e) {
+          const exitUrl = clickTagPrefix + clickURL2;
+          window.open(exitUrl, "_blank");
+          e.stopPropagation(); // stops click bubbling to banner
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      var clickTag = "https://www.avantiwestcoast.co.uk/";
+    </script>
+
+</head>
+
+<body onload="init();">
+
+    <div id="main">
+        <div id="background"></div>
+
+        
+
+        <div id="frame-left" class="absolute frame"></div>
+        <div id="frame-right" class="absolute frame"></div>
+        <div id="frame-bottom" class="absolute frame"></div>
+
+        <div id="headline">
+          <img src="images/headline-7.png" id="headline-7" class="absolute full-width headline" alt="" />
+          <img src="images/headline-6.png" id="headline-6" class="absolute full-width headline" alt="" />
+          <img src="images/headline-5.png" id="headline-5" class="absolute full-width headline" alt="" />
+          <img src="images/headline-4.png" id="headline-4" class="absolute full-width headline" alt="" />
+          <img src="images/headline-3.png" id="headline-3" class="absolute full-width headline" alt="" />
+          <img src="images/headline-2.png" id="headline-2" class="absolute full-width headline" alt="" />
+          <img src="images/headline-1.png" id="headline-1" class="absolute full-width headline" alt="" />
+        </div>
+
+        <img src="images/turtle-shadow.png" id="turtle-shadow" class="absolute full-width"/>
+        <img src="images/turtle.png" id="turtle" class="absolute full-width"/>
+        
+        <img src="images/text1.png" id="text1" class="absolute full-width" alt="" />
+
+        <img src="images/logo.svg" id="logo" class="absolute"/>
+        <img src="images/cta.svg" id="cta" class="absolute hidden"/>
+<!-- <img src="images/10608_Avanti_FGT6_HTML_Banner_Glide_300x250_F3@2x.jpg" style="opacity: .2;" id="ref" class="absolute full-width"/> -->
+        <div id="bgExit"></div>
+
+    </div>
+    <script>
+        var clickArea = document.getElementById("bgExit");
+        clickArea.onclick = function () {
+          window.open(clickTag);
+        };
+    </script>
+</body>
+
+</html>

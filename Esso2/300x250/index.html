@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      var clickTag = "https://www.esso.co.uk/en-gb";
+    </script>
+
+</head>
+
+<body onload="init();">
+
+    <div id="main">
+        <div id="background"></div>
+        <img src="images/bkg.jpg" id="bkg" class="full-width"/>
+        <img src="images/bike.png" id="bike" class="full-width"/>
+
+        <div id="copy1a" class="copy bold copy1 absolute hidden">
+          Win elke<br>dag een<br><span>E-Bike !</span>
+        </div>
+        <div id="copy2" class="copy semibold copy2 absolute hidden">
+          Met Esso altijd iets Extras.
+        </div>
+
+        <div id="imageCont">
+          <img src="images/bike.png" id="bike" class="full-width"/>
+        </div>
+
+        <div id="cta" class="hidden">
+          <span id="cta-text">
+            Nu registreren <img src="images/chevron.svg" id="chevron" class=""/>
+          </span>
+        </div>
+
+        <img src="images/logo.png" id="logo" class="full-width"/>
+
+        <div id="bgExit"></div>
+
+    </div>
+    <script>
+        var clickArea = document.getElementById("bgExit");
+        clickArea.onclick = function () {
+          window.open(clickTag);
+        };
+    </script>
+</body>
+
+</html>

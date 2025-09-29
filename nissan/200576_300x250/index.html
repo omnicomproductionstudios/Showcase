@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="ad.size" content="width=300,height=250">
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <script type="text/javascript">
+      var clickTag = "https://www.nissan.co.uk/owners/car-repair/car-servicing.html"
+    </script>
+
+</head>
+
+<body onload="init();">
+
+    <div id="main">
+        <div id="background"></div>
+        <!-- <img src="images/frame.jpg" class="frame" style="z-index: 1111; opacity: .5;" alt=""> -->
+        <img src="images/bg.jpg" class="frame" alt="">
+        <img src="images/car.png" class="frame" id="car" alt="">
+        <img src="images/copy1.png" id="copy1" alt="">
+         <img src="images/c01.png" class="ch ch1 hidden" alt="">
+         <img src="images/c02.png" class="ch ch2 hidden" alt="">
+         <img src="images/c03.png" class="ch ch3 hidden" alt="">
+         <img src="images/c04.png" class="ch ch4 hidden" alt="">
+         <img src="images/c05.png" class="ch ch5 hidden" alt="">
+        <div id="copy3" class="hidden">
+          Have your Nissan checked out by the<br>
+          experts. Get a Used Car Welcome Check<br>
+          for £30 & you’ll get 12 months RAC too.
+        </div>
+        <div class="copy4">T&Cs apply, visit nissan.co.uk/welcomecheck</div>
+        <img src="images/cta-png.png" id="cta" class="cta hidden" alt="">
+        <img src="images/logo.png" class="logo" alt="">
+        <div id="bgExit"></div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.11.5_min.js"></script>
+    <script>
+        var clickArea = document.getElementById("bgExit");
+        clickArea.onclick = function () {
+          window.open(clickTag);
+        };
+    </script>
+</body>
+
+</html>
