@@ -1,0 +1,155 @@
+body,
+body * {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  border: 0;
+}
+
+button,
+div,
+img,
+svg,
+video {
+  position: absolute;
+}
+
+#main_container {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #000000;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 300px;
+  height: 250px;
+}
+
+#main_content {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 300px;
+  height: 250px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#default_exit {
+  top: -1px;
+  left: -1px;
+  width: 300px;
+  height: 250px;
+  z-index: 500;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Custom Styling */
+@font-face {
+  font-family: "RobotoExtraLight";
+  src: url("fonts/subset-RobotoCondensed-ExtraLight.woff2");
+  font-weight: normal;
+}
+
+
+.full-width{
+  width: 300px;
+  height: 250px;
+}
+.copyContainer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.copy, .bg, .logo, .cta {
+  will-change: transform, opacity;
+}
+.copy{
+  font-family: "RobotoExtraLight";
+  text-align: right;
+  font-size: 25px;
+  line-height: 21px;
+  font-weight: 100;
+  right: 20px;
+  top: 18px;
+  color: #fff;
+}
+.copy span{
+  display: inline-block;
+}
+#cta{
+  /* font-family: "body_font";
+  display: inline-block;
+  font-size: 10px;
+  line-height: 25px;
+  width: 100px;
+  height: 24px;
+  top: 214px;
+  left: 12px;
+  background-color: #FF6600;
+  color: #000;
+  text-align: center;
+  border-radius: 4px; */
+  will-change: transform;
+}
+
+.yellow {
+  width: 500px;
+  height: 500px;
+  background-color: #ffcd44;
+  transform: translate(-230px, 87px) rotate(35deg);
+  /* transform: translate(-424px, 87px) rotate(39deg); */
+}
+.black {
+  width: 500px;
+  height: 500px;
+  background: url(images/pt.jpg) left top repeat;
+  background-size: 200px;
+  background-color: #000;
+  transform: translate(0px, -362px) rotate(35deg);
+  /* transform: translate(31px, -467px) rotate(39deg); */
+}
+.black2, .black3 {
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+  transform: translate(-370px, 235px) rotate(39deg);;
+  /* transform: translate(140px, -379px) rotate(39deg);; */
+}
+#logo{
+  top: 213px;
+  width: 34px;
+  left: 19px;
+}
+.pt1{
+  width: 149px;
+  right: 0px;
+  top: 0px;
+}
+.pt2{
+  width: 181px;
+  right: 0px;
+  top: 0px;
+}
+#hand{
+  left: -42px;
+}

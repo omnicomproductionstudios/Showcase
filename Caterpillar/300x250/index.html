@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.13_min.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.google.com/";
+    </script>
+  </head>
+
+  <body onload="init()">
+    <div id="main_container">
+      <!--start main_container-->
+      <div id="main_content" class="hidden">
+
+        <img src="images/bg1.jpg" class="full-width" id="bg1" alt="">
+
+        <img src="images/bg2.jpg" class="full-width hidden" id="bg2" alt="">
+        <img src="images/hand.png" class="full-width hidden" id="hand" alt="">
+
+        
+        <div class="yellow"></div>
+        <div class="black"></div>
+        <div class="black2"></div>
+        <div class="black3"></div>
+        
+        <img src="images/bg3.jpg" class="full-width hidden" id="bg3" alt="">
+        
+        <img src="images/logo.png" id="logo" alt="">
+        
+        <div class="copy copy1" id="copy1">
+          <span>THE MOST</span><br><span>IMPORTANT</span><br><span>WORK</span>
+        </div>
+
+        <div class="copy copy2" id="copy2">
+          <span>IS SHOWING</span><br><span>UP HERE</span>
+        </div>
+
+        <img src="images/cta.png" alt="" id="cta" class="full-width hidden">
+
+      </div>
+
+      <div id="default_exit" class="btn"></div>
+      <!--end main_container-->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      document
+        .getElementById("default_exit")
+        .addEventListener("click", function () {
+          window.open(clickTag, "_blank");
+        });
+    </script>
+  </body>
+</html>
