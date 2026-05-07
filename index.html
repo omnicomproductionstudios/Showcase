@@ -3,7 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banner work samples</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Omnicom Production | Interactive Work Showcase</title>
+    <meta
+      name="description"
+      content="A curated internal showcase of interactive banner campaigns, rich media executions, website builds, and brand experience work by Omnicom Production."
+    />
+    <meta
+      name="keywords"
+      content="Omnicom Production, creative technology, HTML5 banners, rich media, digital production, web development, interactive advertising, client showcase"
+    />
+    <meta name="author" content="Omnicom Production" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#080b10" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Omnicom Production | Interactive Work Showcase" />
+    <meta
+      property="og:description"
+      content="Internal client-ready showcase featuring HTML5 banners, rich media units, websites, and brand collaborations."
+    />
+    <meta
+      property="og:image"
+      content="https://omnicomproduction.com/wp-content/uploads/2025/01/logo-op.svg"
+    />
+    <meta property="og:site_name" content="Omnicom Production Showcase" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Omnicom Production | Interactive Work Showcase" />
+    <meta
+      name="twitter:description"
+      content="A polished internal showcase of digital production work for prospective clients."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://omnicomproduction.com/wp-content/uploads/2025/01/logo-op.svg"
+    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://omnicomproduction.com" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,331 +48,759 @@
       crossorigin="anonymous"
     />
     <style>
+      :root {
+        --bg: #080b10;
+        --surface: #101721;
+        --surface-strong: #151f2d;
+        --line: rgba(255, 255, 255, 0.13);
+        --text: #f6f8fb;
+        --muted: #aab5c4;
+        --accent: #45d6c6;
+        --accent-2: #ffb86b;
+        --accent-3: #8fb7ff;
+        --shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+      }
+
       * {
         box-sizing: border-box;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        background-color: #000;
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        background:
+          linear-gradient(145deg, rgba(69, 214, 198, 0.12), transparent 34%),
+          linear-gradient(215deg, rgba(255, 184, 107, 0.1), transparent 38%),
+          var(--bg);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
       }
-      .logo {
-        margin-bottom: 100px;
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 72%);
       }
-      .links {
+
+      a {
+        color: inherit;
+      }
+
+      .page-shell {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 28px 0;
+      }
+
+      .site-logo {
+        width: min(320px, 62vw);
+        height: auto;
+        filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.3));
+      }
+
+      .nav-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 200px;
+        gap: 10px;
+        justify-content: flex-end;
       }
-      .title {
+
+      .nav-link-pill,
+      .work-link,
+      .website-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--text);
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .nav-link-pill {
+        padding: 9px 16px;
+        background: rgba(255, 255, 255, 0.055);
+        font-size: 14px;
+      }
+
+      .nav-link-pill:hover,
+      .work-link:hover,
+      .website-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(69, 214, 198, 0.65);
         color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        text-align: center;
+        background: rgba(69, 214, 198, 0.1);
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+        gap: 28px;
+        align-items: center;
+        min-height: 430px;
+        padding: 34px 0 58px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 20px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
-      .websites {
+
+      .eyebrow::before {
+        width: 30px;
+        height: 2px;
+        content: "";
+        background: var(--accent);
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(40px, 5.6vw, 72px);
+        font-weight: 850;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .hero-copy {
+        max-width: 670px;
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: clamp(16px, 1.7vw, 20px);
+        line-height: 1.6;
+      }
+
+      .hero-panel {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(16, 23, 33, 0.78);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+        overflow: hidden;
+      }
+
+      .hero-panel.featured {
+        min-height: 220px;
+        display: grid;
+        align-content: center;
+      }
+
+      .hero-panel.featured::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background:
+          linear-gradient(135deg, rgba(69, 214, 198, 0.2), transparent 42%),
+          linear-gradient(315deg, rgba(143, 183, 255, 0.16), transparent 45%);
+        opacity: 0.85;
+      }
+
+      .panel-row {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        padding: 26px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-row:last-child {
+        border-bottom: 0;
+      }
+
+      .panel-label {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .panel-value {
+        margin: 6px 0 0;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 850;
+      }
+
+      .featured .panel-value {
+        margin-top: 10px;
+        font-size: clamp(44px, 6vw, 72px);
+        line-height: 0.92;
+      }
+
+      .panel-note {
+        max-width: 310px;
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .panel-marker {
+        width: 13px;
+        height: 13px;
+        margin-top: 4px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 8px rgba(69, 214, 198, 0.1);
+      }
+
+      .panel-marker.alt {
+        background: var(--accent-2);
+        box-shadow: 0 0 0 8px rgba(255, 184, 107, 0.1);
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .section-heading {
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 200px;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
       }
-      .brands {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 80px;
+
+      .section-kicker {
+        margin: 0 0 8px;
+        color: var(--accent-2);
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
-      .brands img {
-        width: 200px;
-        height: 150px;
+
+      h2 {
+        margin: 0;
+        font-size: clamp(30px, 4vw, 50px);
+        font-weight: 850;
+        letter-spacing: 0;
+      }
+
+      .section-copy {
+        max-width: 430px;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .work-grid,
+      .website-grid,
+      .brand-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .work-grid {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
+
+      .website-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .work-link,
+      .website-link {
+        justify-content: space-between;
+        min-height: 82px;
+        padding: 18px;
+        border-radius: 8px;
+        background: rgba(16, 23, 33, 0.74);
+      }
+
+      .work-link span,
+      .website-link span {
+        display: block;
+      }
+
+      .item-title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .item-meta {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .arrow {
+        position: relative;
+        flex: 0 0 auto;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #07100f;
+        background: var(--accent);
+        font-size: 0;
+        transition: transform 180ms ease;
+      }
+
+      .arrow::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        content: "";
+        background: currentColor;
+        transform: translate(-55%, -50%);
+      }
+
+      .arrow::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 7px;
+        height: 7px;
+        content: "";
+        border-top: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        transform: translate(-12%, -50%) rotate(45deg);
+      }
+
+      .website-link .arrow {
+        background: var(--accent-3);
+      }
+
+      .work-link:hover .arrow,
+      .website-link:hover .arrow {
+        transform: translateX(3px);
+      }
+
+      .brand-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .brand-tile {
+        display: grid;
+        place-items: center;
+        min-height: 126px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: #fff;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .brand-tile:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+      }
+
+      .brand-tile img {
+        width: 100%;
+        max-width: 160px;
+        height: 86px;
         object-fit: contain;
-        background-color: #ffff;
-        border: #ccc solid 1px;
-        padding: 10px;
-        border-radius: 6px;
       }
-      .btn {
-        font-size: 20px;
-      }
+
       .footer {
+        padding: 50px 0 36px;
+        color: var(--muted);
         text-align: center;
       }
-      .footer {
-        padding: 30px 0;
+
+      .footer strong {
+        color: var(--text);
       }
-      .footer span {
-        color: #fff;
-        opacity: 0.8;
+
+      .heart {
+        color: #ff4d5e;
+      }
+
+      .fade-up {
+        animation: fade-up 700ms ease both;
+      }
+
+      .delay-1 {
+        animation-delay: 110ms;
+      }
+
+      .delay-2 {
+        animation-delay: 220ms;
+      }
+
+      .delay-3 {
+        animation-delay: 330ms;
+      }
+
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .site-header,
+        .section-heading {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav-actions {
+          justify-content: flex-start;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+          padding: 34px 0 54px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .page-shell {
+          width: min(100% - 24px, 1180px);
+        }
+
+        .site-header {
+          padding-top: 20px;
+        }
+
+        .nav-link-pill {
+          flex: 1 1 auto;
+        }
+
+        .work-grid,
+        .website-grid,
+        .brand-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .work-link,
+        .website-link {
+          min-height: 76px;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="logo text-center mt-5">
+    <header class="page-shell site-header fade-up">
+      <a href="index.html" aria-label="Omnicom Production showcase home">
         <img
+          class="site-logo"
           src="https://omnicomproduction.com/wp-content/uploads/2025/01/logo-op.svg"
-          alt=""
-          width="400px"
+          alt="Omnicom Production"
         />
-      </div>
-    </div>
-    <div class="container">
-      <div class="title">Ad Banners</div>
-      <div class="links">
-        <a
-          href="Anaplan1/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >AnaPlan AI 300x250</a
-        >
-        <a
-          href="Anaplan2/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >AnaPlan AI 01 300x250</a
-        >
-        <a
-          href="CapitalOne2/Bank_Bank_Nextdoor_Cafe_NA_RM_RM_EN_NA_728x90_P00114026/Bank_Bank_Nextdoor_Cafe_NA_RM_RM_EN_NA_728x90_P00114026.html"
-          class="btn btn-light"
-          target="_blank"
-          >CapitalOne Rich Media</a
-        >
-        <a
-          href="CapitalOne1/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >CapitalOne 300x250</a
-        >
-        <a
-          href="Avanti/10608-01_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Avanti 300x250</a
-        >
+      </a>
+      <nav class="nav-actions" aria-label="Showcase sections">
+        <a class="nav-link-pill" href="#banners">Banners</a>
+        <a class="nav-link-pill" href="#websites">Websites</a>
+        <a class="nav-link-pill" href="#brands">Brands</a>
+      </nav>
+    </header>
 
-        <a
-          href="BTBusiness/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >BT Business 300x250</a
-        >
+    <main>
+      <section class="page-shell hero">
+        <div class="fade-up delay-1">
+          <p class="eyebrow">Internal client showcase</p>
+          <h1>Websites, platforms, and campaigns built end-to-end.</h1>
+          <p class="hero-copy">
+            A curated view of responsive builds, interactive platforms, creative technology,
+            rich media, and scalable production craft by Omnicom Production teams.
+          </p>
+        </div>
+        <aside class="hero-panel featured fade-up delay-2" aria-label="Brand collaboration summary">
+          <div class="panel-row">
+            <div>
+              <p class="panel-label">Brand collaborations</p>
+              <p class="panel-value">26+</p>
+              <p class="panel-note">
+                Cross-category experience supporting websites, digital campaigns, and
+                scalable production systems.
+              </p>
+            </div>
+            <span class="panel-marker" aria-hidden="true"></span>
+          </div>
+        </aside>
+      </section>
 
-        <a
-          href="calpol/970x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Calpol 970x250</a
-        >
-        <a
-          href="columbia/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Columbia 300x250</a
-        >
-        <a href="cupra/300x250/index.html" class="btn btn-light" target="_blank"
-          >Cupra 300x250</a
-        >
-        <a
-          href="Eckrich/Eckrich_Smokies_Banners_v1_300x600/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Eckrich 300x600</a
-        >
-        <a href="Esso/300x250/index.html" class="btn btn-light" target="_blank"
-          >Esso 300x250</a
-        >
-        <a href="Esso2/300x250/index.html" class="btn btn-light" target="_blank"
-          >Esso_01 300x250</a
-        >
-        <a
-          href="Guinness/Guinness_SkySportsBanners_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Guinness 300x250</a
-        >
-        <a
-          href="Halifex/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Halifex 300x250</a
-        >
-        <a href="IG/300X250/index.html" class="btn btn-light" target="_blank"
-          >IG 300x250</a
-        >
-        <a
-          href="iShares/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >iShares 300x250</a
-        >
-        <a
-          href="JetBlue/tallahassee_dynamic_banners_route1/base/CA_Vacation_R2_baseload_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >JetBlue 300x250</a
-        >
-        <a
-          href="JetBlue2/05768_JetBlue_Aruba_Cusine_route1/base/JetBlue_Aruba_Cusine_baseload_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >JetBlue_01 300x250</a
-        >
-        <a
-          href="kraken/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Kraken 300x250</a
-        >
-        <a
-          href="lloyds/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Lloyds 300x250</a
-        >
-        <a
-          href="lloyds2/300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Lloyds_01 300x250</a
-        >
-        <a
-          href="lloyds3/320x468/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Lloyds_02 320x468</a
-        >
-        <a
-          href="lloyds4/Engage Layer 1 - 300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Lloyds_03 300x250</a
-        >
-        <a
-          href="nissan/200576_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Nissan 300x250</a
-        >
-        <a
-          href="orkin/Orkin_General_Pest_HVC_300X250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >Orkin 300x250</a
-        >
-        <a
-          href="SEAT/SEAT_2024_AWARENESS_ARONA_Banner_FOM_300x250/index.html"
-          class="btn btn-light"
-          target="_blank"
-          >SEAT 300x250</a
-        >
-        <a href="SEAT2/300x250/index.html" class="btn btn-light" target="_blank"
-          >SEAT_01 300x250</a
-        >
-      </div>
-    </div>
-    <div class="container">
-      <div class="title">Websites</div>
-      <div class="websites">
-        <a href="https://www.ddb.com/" class="btn btn-info" target="_blank"
-          >DDB.com</a
-        >
-        <a
-          href="https://www.thefactsnow.com/"
-          class="btn btn-info"
-          target="_blank"
-          >TFN - The Fect Now</a
-        >
-        <a
-          href="https://energyupgradeca.org/flex-alert"
-          class="btn btn-info"
-          target="_blank"
-          >EUX Flex Alert</a
-        >
-        <a href="https://awards.ddb.com/" class="btn btn-info" target="_blank"
-          >Award DDB</a
-        >
-        <a
-          href="https://ddbcountsdev.wpenginepowered.com/"
-          class="btn btn-info"
-          target="_blank"
-          >DDB Counts</a
-        >
-        <a
-          href="https://youngagainneveragain.org/"
-          class="btn btn-info"
-          target="_blank"
-          >Liberation75</a
-        >
-        <a
-          href="https://adamandeveddb.com/"
-          class="btn btn-info"
-          target="_blank"
-          >adam&eveDDB</a
-        >
-        <a
-          href="https://adamandevenyc.com/"
-          class="btn btn-info"
-          target="_blank"
-          >adam&eve Agency</a
-        >
-        <a
-          href="https://adamandeveberlin.com/"
-          class="btn btn-info"
-          target="_blank"
-          >adam&eve Berlin</a
-        >
-        <a
-          href="https://adamandevewest.com/"
-          class="btn btn-info"
-          target="_blank"
-          >adam&eve West</a
-        >
-        <a
-          href="https://adamandevewest.com/"
-          class="btn btn-info"
-          target="_blank"
-          >adam&eve West</a
-        >
-      </div>
-    </div>
-    <div class="container">
-      <div class="title">Brands We’ve Worked With</div>
-      <div class="brands">
-        <img src="brands/Picture 1.jpg" alt="" />
-        <img src="brands/Picture 2.jpg" alt="" />
-        <img src="brands/Picture 3.png" alt="" />
-        <img src="brands/Picture 4.png" alt="" />
-        <img src="brands/Picture 5.png" alt="" />
-        <img src="brands/Picture 6.png" alt="" />
-        <img src="brands/Picture 7.png" alt="" />
-        <img src="brands/Picture 8.png" alt="" />
-        <img src="brands/Picture 9.png" alt="" />
-        <img src="brands/Picture 10.png" alt="" />
-        <img src="brands/Picture 11.png" alt="" />
-        <img src="brands/Picture 12.png" alt="" />
-        <img src="brands/Picture 13.jpg" alt="" />
-        <img src="brands/Picture 14.jpg" alt="" />
-        <img src="brands/Picture 15.png" alt="" />
-        <img src="brands/Picture 16.png" alt="" />
-        <img src="brands/Picture 17.png" alt="" />
-        <img src="brands/Picture 18.png" alt="" />
-        <img src="brands/Picture 19.png" alt="" />
-        <img src="brands/Picture 20.png" alt="" />
-        <img src="brands/Picture 21.jpg" alt="" />
-        <img src="brands/Picture 22.jpg" alt="" />
-        <img src="brands/Picture 23.png" alt="" />
-        <img src="brands/Picture 24.jpg" alt="" />
-        <img src="brands/picture_25.jpg" alt="" />
-        <img src="brands/Picture 26.jpg" alt="" />
-      </div>
-    </div>
+      <section class="page-shell section fade-up delay-2" id="banners">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Campaign and ad technology</p>
+            <h2>Interactive Campaign Work</h2>
+          </div>
+          <p class="section-copy">
+            Production-ready campaign examples across standard, expandable, and animated
+            formats, supporting broader digital launches.
+          </p>
+        </div>
+        <div class="work-grid">
+          <a href="Anaplan1/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">AnaPlan AI</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Anaplan2/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">AnaPlan AI 01</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="CapitalOne2/Bank_Bank_Nextdoor_Cafe_NA_RM_RM_EN_NA_728x90_P00114026/Bank_Bank_Nextdoor_Cafe_NA_RM_RM_EN_NA_728x90_P00114026.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Capital One Rich Media</span><span class="item-meta">728x90 expandable</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="CapitalOne1/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Capital One</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Avanti/10608-01_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Avanti</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="BTBusiness/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">BT Business</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="calpol/970x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Calpol</span><span class="item-meta">970x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="columbia/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Columbia</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="cupra/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Cupra</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Eckrich/Eckrich_Smokies_Banners_v1_300x600/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Eckrich</span><span class="item-meta">300x600</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Esso/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Esso</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Esso2/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Esso 01</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Guinness/Guinness_SkySportsBanners_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Guinness</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="Halifex/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Halifax</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="IG/300X250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">IG</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="iShares/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">iShares</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="JetBlue/tallahassee_dynamic_banners_route1/base/CA_Vacation_R2_baseload_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">JetBlue</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="JetBlue2/05768_JetBlue_Aruba_Cusine_route1/base/JetBlue_Aruba_Cusine_baseload_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">JetBlue 01</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="kraken/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Kraken</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="lloyds/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Lloyds</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="lloyds2/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Lloyds 01</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="lloyds3/320x468/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Lloyds 02</span><span class="item-meta">320x468</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="lloyds4/Engage Layer 1 - 300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Lloyds 03</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="nissan/200576_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Nissan</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="orkin/Orkin_General_Pest_HVC_300X250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Orkin</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="SEAT/SEAT_2024_AWARENESS_ARONA_Banner_FOM_300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">SEAT</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="SEAT2/300x250/index.html" class="work-link" target="_blank" rel="noopener">
+            <span><span class="item-title">SEAT 01</span><span class="item-meta">300x250</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </section>
 
-    <div class="footer">
-      <span>Thanks for visiting! Made with</span> ❤️
-      <span>by Omnicom Production.</span>
-    </div>
+      <section class="page-shell section fade-up delay-3" id="websites">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Responsive digital platforms</p>
+            <h2>Websites</h2>
+          </div>
+          <p class="section-copy">
+            Website development work built by our team for brands, campaigns, and digital
+            platforms.
+          </p>
+        </div>
+        <div class="website-grid">
+          <a href="https://www.ddb.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">DDB.com</span><span class="item-meta">Global agency site</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://www.thefactsnow.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">TFN - The Facts Now</span><span class="item-meta">Campaign platform</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://energyupgradeca.org/flex-alert" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">EUX Flex Alert</span><span class="item-meta">Public utility content</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://awards.ddb.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Awards DDB</span><span class="item-meta">Awards showcase</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://ddbcountsdev.wpenginepowered.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">DDB Counts</span><span class="item-meta">Internal platform</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://youngagainneveragain.org/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">Liberation75</span><span class="item-meta">Cultural initiative</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://adamandeveddb.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">adam&amp;eveDDB</span><span class="item-meta">Agency site</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://adamandevenyc.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">adam&amp;eve NYC</span><span class="item-meta">Agency site</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://adamandeveberlin.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">adam&amp;eve Berlin</span><span class="item-meta">Agency site</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://adamandevewest.com/" class="website-link" target="_blank" rel="noopener">
+            <span><span class="item-title">adam&amp;eve West</span><span class="item-meta">Agency site</span></span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="page-shell section fade-up delay-3" id="brands">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Selected collaborations</p>
+            <h2>Brands We've Worked With</h2>
+          </div>
+          <p class="section-copy">
+            A snapshot of brand categories and visual systems supported through production.
+          </p>
+        </div>
+        <div class="brand-grid">
+          <div class="brand-tile"><img src="brands/Picture 1.jpg" alt="Brand logo 1" /></div>
+          <div class="brand-tile"><img src="brands/Picture 2.jpg" alt="Brand logo 2" /></div>
+          <div class="brand-tile"><img src="brands/Picture 3.png" alt="Brand logo 3" /></div>
+          <div class="brand-tile"><img src="brands/Picture 4.png" alt="Brand logo 4" /></div>
+          <div class="brand-tile"><img src="brands/Picture 5.png" alt="Brand logo 5" /></div>
+          <div class="brand-tile"><img src="brands/Picture 6.png" alt="Brand logo 6" /></div>
+          <div class="brand-tile"><img src="brands/Picture 7.png" alt="Brand logo 7" /></div>
+          <div class="brand-tile"><img src="brands/Picture 8.png" alt="Brand logo 8" /></div>
+          <div class="brand-tile"><img src="brands/Picture 9.png" alt="Brand logo 9" /></div>
+          <div class="brand-tile"><img src="brands/Picture 10.png" alt="Brand logo 10" /></div>
+          <div class="brand-tile"><img src="brands/Picture 11.png" alt="Brand logo 11" /></div>
+          <div class="brand-tile"><img src="brands/Picture 12.png" alt="Brand logo 12" /></div>
+          <div class="brand-tile"><img src="brands/Picture 13.jpg" alt="Brand logo 13" /></div>
+          <div class="brand-tile"><img src="brands/Picture 14.jpg" alt="Brand logo 14" /></div>
+          <div class="brand-tile"><img src="brands/Picture 15.png" alt="Brand logo 15" /></div>
+          <div class="brand-tile"><img src="brands/Picture 16.png" alt="Brand logo 16" /></div>
+          <div class="brand-tile"><img src="brands/Picture 17.png" alt="Brand logo 17" /></div>
+          <div class="brand-tile"><img src="brands/Picture 18.png" alt="Brand logo 18" /></div>
+          <div class="brand-tile"><img src="brands/Picture 19.png" alt="Brand logo 19" /></div>
+          <div class="brand-tile"><img src="brands/Picture 20.png" alt="Brand logo 20" /></div>
+          <div class="brand-tile"><img src="brands/Picture 21.jpg" alt="Brand logo 21" /></div>
+          <div class="brand-tile"><img src="brands/Picture 22.jpg" alt="Brand logo 22" /></div>
+          <div class="brand-tile"><img src="brands/Picture 23.png" alt="Brand logo 23" /></div>
+          <div class="brand-tile"><img src="brands/Picture 24.jpg" alt="Brand logo 24" /></div>
+          <div class="brand-tile"><img src="brands/picture_25.jpg" alt="Brand logo 25" /></div>
+          <div class="brand-tile"><img src="brands/Picture 26.jpg" alt="Brand logo 26" /></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-shell footer">
+      <span>Thanks for visiting! Made with <span class="heart">&#10084;</span> by <strong>Omnicom Production</strong>.</span>
+    </footer>
   </body>
 </html>
